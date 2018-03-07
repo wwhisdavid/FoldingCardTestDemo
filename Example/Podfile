@@ -1,0 +1,36 @@
+
+platform :ios, '8.0'
+
+target 'TestDemo_Example' do
+  pod 'TestDemo', :path => '../'
+  
+  pod 'MGJRouter', '~>0.9.0'
+  pod 'Masonry'
+  pod 'MJExtension'
+  pod 'BlocksKit'
+  
+end
+
+post_install do |installer|
+    cmd="
+    dir=\"`pwd`/Pods/Headers/Public\"
+    cd $dir
+    for pod in `ls -1`
+        do
+            cd $pod
+            inner=`ls -1`
+            if [ \"$pod\" == \"$inner\" ]
+                then
+                mv $inner/* ./
+                rm -rf $inner
+                for file in `ls -1`
+                    do
+                        followPath=`ls -l \"$file\" | awk -F ' ../' '{print $2}'`
+                        ln -fs \"$followPath\" \"$file\"
+                    done
+                fi
+                cd $dir
+            done
+            "
+            system(cmd)
+end
