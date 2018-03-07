@@ -21,5 +21,10 @@
   "source_files": "TestDemo/Classes/**/*",
   "resources": [
     "TestDemo/Assets/*"
-  ]
+  ],
+  "dependencies": {
+    "Masonry": [],
+    "MJExtension": [],
+    "BlocksKit": []
+  }
 }

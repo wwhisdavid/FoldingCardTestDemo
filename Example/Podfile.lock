@@ -15,14 +15,15 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - Masonry (1.1.0)
-  - MGJRouter (0.9.3)
   - MJExtension (3.0.13)
-  - TestDemo (0.1.0)
+  - TestDemo (0.1.0):
+    - BlocksKit
+    - Masonry
+    - MJExtension
 
 DEPENDENCIES:
   - BlocksKit
   - Masonry
-  - MGJRouter (~> 0.9.0)
   - MJExtension
   - TestDemo (from `../`)
 
@@ -33,10 +34,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MGJRouter: f65821e2aeffc8f9e84b254c8f1c0dd80f048aa9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  TestDemo: c5810325096887e1bc0e5ef2780b250f3ef2ce30
+  TestDemo: cba4bbcc3e5c6671fe0ab4fcfd2c177a0cd61abe
 
-PODFILE CHECKSUM: 352a70528e6498a48e9cdd09efa6b55f3d68f520
+PODFILE CHECKSUM: 0583cc192c2c6faebd0d2477f6144d28472d25f1
 
 COCOAPODS: 1.1.1
